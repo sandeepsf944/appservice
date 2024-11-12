@@ -3,6 +3,7 @@ variable linux_web_app_name {
 }
 variable app_settings {
     type = any
+    default = {}
 } 
 variable app_startup_command {
     type = any
@@ -25,6 +26,15 @@ variable restricted_ip_name_list {
 variable zip_deploy_file_path {
     type = any
 }
+
+variable php_version {
+    type = any
+    default = {}
+} 
+variable python_version {
+    type = any
+    default = {}
+} 
 # type = any
 # type = list(string)
 # type = string

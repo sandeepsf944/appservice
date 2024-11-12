@@ -27,13 +27,13 @@ resource "azurerm_linux_web_app" "example" {
     application_stack {
     python_version = lookup(application_stack.value, "python_version", null)
     php_version = lookup(application_stack.value, "php_version", null)
-    dotnet_version = lookup(application_stack.value, "dotnet_version", null)
-    go_version = lookup(application_stack.value, "go_version", null)
-    java_server = lookup(application_stack.value, "java_server", null)
-    java_server_version = lookup(application_stack.value, "java_server_version", null)
-    java_version = lookup(application_stack.value, "java_version", null)
-    node_version = lookup(application_stack.value, "node_version", null)
-    ruby_version = lookup(application_stack.value, "ruby_version", null)
+    # dotnet_version = lookup(application_stack.value, "dotnet_version", null)
+    # go_version = lookup(application_stack.value, "go_version", null)
+    # java_server = lookup(application_stack.value, "java_server", null)
+    # java_server_version = lookup(application_stack.value, "java_server_version", null)
+    # java_version = lookup(application_stack.value, "java_version", null)
+    # node_version = lookup(application_stack.value, "node_version", null)
+    # ruby_version = lookup(application_stack.value, "ruby_version", null)
 
     }
   }
