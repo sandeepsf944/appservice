@@ -51,6 +51,10 @@ variable python_version {
     default = null
 }
 
+variable dotnet_version {
+    type = any
+    default = null
+}
 variable webdeploy_publish_basic_authentication_enabled {
     type = any
     default = false    

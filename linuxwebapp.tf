@@ -1,4 +1,4 @@
-resource "azurerm_linux_web_app" "example" {
+resource "azurerm_linux_web_app" "linux_web_app" {
   name                = lower(var.linux_web_app_name)
   resource_group_name = var.resource_group_name
   location            = var.location
@@ -6,7 +6,6 @@ resource "azurerm_linux_web_app" "example" {
   #here service plan id automatically took
 
   app_settings = merge({ SCM_DO_BUILD_DURING_DEPLOYMENT = true }, var.app_settings)
-
 
   dynamic "site_config" {
     for_each = [merge(local.default_site_config, var.site_config)]
@@ -21,7 +20,7 @@ resource "azurerm_linux_web_app" "example" {
       application_stack {
         python_version = var.python_version
         php_version = var.php_version
-        # dotnet_version = lookup(application_stack.value, "dotnet_version", null)
+        dotnet_version = var.dotnet_version
         # go_version = lookup(application_stack.value, "go_version", null)
         # java_server = lookup(application_stack.value, "java_server", null)
         # java_server_version = lookup(application_stack.value, "java_server_version", null)
